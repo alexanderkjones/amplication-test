@@ -65,3 +65,10 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model TestEntity {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  testField String?
+  updatedAt DateTime @updatedAt
+}
